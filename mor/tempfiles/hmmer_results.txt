@@ -1,0 +1,23 @@
+hmmpfam - search one or more sequences against HMM database
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                 static/homobasidiomycetesHMM
+Sequence file:            HMM.fasta
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query sequence: EU846313
+Accession:      [none]
+Description:    Alpova olivaceotinctus large subunit ribosomal RNA gene, partial sequence.
+
+Scores for sequence family classification (score includes all domains):
+Model              Description                          Score    E-value  N 
+--------           -----------                          -----    ------- ---
+homobasidiomycetes                                      303.5    4.4e-92   1
+
+Parsed for domains:
+Model              Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------           ------- ----- -----    ----- -----      -----  -------
+homobasidiomycetes   1/1      16   636 ..     1  1012 []   303.5  4.4e-92
+//

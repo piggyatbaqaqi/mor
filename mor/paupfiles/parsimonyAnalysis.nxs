@@ -1,0 +1,15 @@
+begin PAUP;
+set criterion=parsimony;
+outgroup AF311051 AJ406403;
+loadconst file=	'REPLACEBACKBONE' asbackbone;
+hsearch	keep=0	hold=5	enforce=yes start=stepwise addseq=asis swap=none;
+loadconst file='REPLACEBACKBONE' asbackbone;
+hsearch enforce=yes start=current multrees=yes nchuck=100 chuckscore=20 timelimit=REPLACETIME swap=tbr;
+savetrees from=1 to=1 file='REPLACEPARTREE' replace=yes;
+roottrees;
+log file='REPLACELOG';
+pscores 1/scorefile='REPLACESCORE' ci=yes ri=yes rc=yes hi=yes gfit=yes replace=yes;
+contree all/strict=no majrule=yes grpfreq=no treefile='REPLACETREEFINAL';
+log stop;
+quit warntsave=no;
+end;

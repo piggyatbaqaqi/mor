@@ -1,0 +1,23 @@
+
+========================[ Jun 19, 2008  3:14 PM ]========================
+Version 2.2.18 [Mar-02-2008]
+Started database file "/home/cha09/sequence.fast"
+Formatted 3283 sequences in volume 0
+SUCCESS: formatted database /home/cha09/sequence.fast
+
+========================[ Jul 15, 2008  9:50 AM ]========================
+ERROR: [000.000] No database name was specified
+
+========================[ Jul 15, 2008  9:51 AM ]========================
+Version 2.2.18 [Mar-02-2008]
+Started database file "accnos.fasta"
+WARNING: [000.000] Cannot add sequence number 44 (lcl|44_morBLAST) because it has zero-length.
+
+Removed single-volume database morBLAST
+FATAL ERROR: [001.000] Fatal error when adding sequence to BLAST database.
+
+========================[ Jul 15, 2008  9:54 AM ]========================
+Version 2.2.18 [Mar-02-2008]
+Started database file "accnos.fasta"
+Formatted 4849 sequences in volume 0
+SUCCESS: formatted database morBLAST

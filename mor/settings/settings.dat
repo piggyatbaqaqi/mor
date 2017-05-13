@@ -1,0 +1,187 @@
+#####
+##### General mor settings
+#####
+
+#############################
+##### MySQL database settings
+#############################
+
+username=
+password=
+data_source=DBI:mysql:mormain:127.0.0.1
+ITStable=its
+LSUtable=mor
+cladetable=cladeconstraints
+MATCHtable=matches
+TREEtable=trees
+
+###########################
+##### Genbank / Acquisition
+###########################
+
+# the Genbank query string
+query_string=
+
+genbankWebLookup=http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=nucleotide&cmd=search&term=
+
+
+###########################################################
+#### Information for the website and archiver and clades.pm
+###########################################################
+webPath=/home/www
+newickDirectory=/home/www/newick
+nexusDirectory=/home/www/nexus
+graphDirectory=/home/www/treegraphs
+webFinalNexus=/home/www/new_easyrider.nxs
+
+#######################
+#### mor_backup.pl info
+#######################
+backupLoc=/backup
+
+################
+#### HTML output
+################
+HTMLOutputDir=htmlfiles
+JackknifeHTML=nj.html
+ParsimonyHTML=mp.html
+LikelihoodHTML=ml.html
+
+################################
+#### mor settings for statefiles
+################################
+
+# file that informs any future process of mor that the script is already running
+concurrency=statefiles/mor_lock_
+
+# when was script last run?
+lastrunfile=statefiles/lastrun
+
+##########
+##### PAUP
+##########
+
+# Executable
+paup=paup
+
+# phylogenetic tree timestamp storage
+phyloTimelog=statefiles/phylotime.txt
+
+# PAUP log for a tree
+paupLogTree=paupfiles/logTree.nxs
+
+# scorefile for paup
+scorefile=data/paup_scorefile.nxs
+
+#######################
+#### Parsimony settings
+#######################
+
+#Template file for a parsimony run
+paupPARSrun=paupfiles/parsimonyAnalysis.nxs
+
+# parsimony nxs location used by Paup
+ParsimonyNXS=paupfiles/parsimony.nxs
+
+# consensus tree parsimony string file
+TreePars=paupfiles/contreepars.nxs
+
+# file where parsimony log saved
+ParsimonyLog=paupfiles/parsimony.log
+
+# one hour parsimony analysis
+parsimonyTime=432000
+
+# name of the constraints tree file for parsimony
+constraints=paupfiles/constraintsTree.txt
+
+ConsensusString=data/consensus_string.nxs
+
+################
+#### NJ settings
+################
+
+#Template for paup
+paupNJrun=paupfiles/njAnalysis.nxs
+
+#Replicate trees file
+NJJKreplicates=paupfiles/trees100.nxs 
+
+# majority rule tree from trees100.nxs
+ConsensusNJTree=paupfiles/njcontree.nxs
+
+# Paup-appended NEXUS file
+NJNXS=paupfiles/nj_paup_homobasidiomycetes.nxs
+
+#Log file
+NJLog=paupfiles/njtree.log
+
+##################################################
+#### ML settings (paup doesn't do the ML analysis)
+#### it's just for printing the tree out
+##################################################
+# The log file that's use for the website
+paupMLLog=paupfiles/raxpauplog.log
+
+# The template used
+mlPaupTree=paupfiles/mlTree.nxs
+
+####################
+##### RAxML settings
+####################
+
+# Name of the binary that raxml is called using
+raxml=raxmlHPC-PTHREADS
+
+# Location of the in file
+raxmlPHY=paupfiles/raxml.phy
+
+# This line could affect the names of the output files so double check Analysis.pm and the manual
+raxmlParams=-m GTRMIX -T 2
+
+# Name of the log for raxml
+raxmlLog=logs/raxml.log
+
+# Name of the tree file for raxml
+raxmlTree=paupfiles/raxml.tree
+
+# Name of the info file for raxml
+raxmlInfo=logs/raxml.info
+
+# The name of the raxml files (raxml will append this to its output and mor will move it to the above directory)
+raxmlFile=raxml.out
+
+# The name of the backbone constraint tree in newick format
+newickConst=backbone.tree
+
+########################
+##### Alignment settings
+########################
+
+# MAFFT's infile
+alignIn=data/mafft_unaligned.fasta
+
+# MAFFT's outfile
+alignOut=data/mafft_aligned.fasta
+
+# NEXUS file
+NXSfile=data/homobasidiomycetes.nxs
+
+###########################
+##### HMMER/Screening files
+###########################
+
+# HMMER's profile
+HMMfile=static/homobasidiomycetesHMM
+
+# Output of HMMER for each sequence
+hmmersuccessFASTA=tempfiles/hmmer_success.fasta
+
+primerA=acccgctgaacttaagc
+primerB=agatcttggtggtagta
+vector_mismatch_percentage=8
+
+#####################
+##### Clades settings
+#####################
+cladeTempDir=tmp/morclades/

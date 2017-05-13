@@ -1,0 +1,12 @@
+begin PAUP;
+set criterion=distance;
+dset dist=gtr;
+outgroup AY463475 AY586643;
+nj treefile='REPLACENJTREE' append=yes;
+log file = REPLACELOG;
+jackknife nreps=100 pctdelete=37 grpfreq=no search=nj treefile='REPLACETREEOUT' replace=yes;
+log stop;
+gettrees file='REPLACETREEOUT' warntree=no;
+contree all/strict=no majrule=yes grpfreq=no treefile='REPLACETREEFINAL' replace=yes;
+quit;
+end;

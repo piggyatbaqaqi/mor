@@ -1,0 +1,11 @@
+begin PAUP;
+
+outgroup AY463475 AY586643;
+gettrees file='REPLACETREE' warntree=no;
+
+log file = REPLACELOG;
+describe trees;
+log stop;
+
+quit;
+end;
